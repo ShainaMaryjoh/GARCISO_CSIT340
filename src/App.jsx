@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.css";
 
 function App() {
@@ -8,11 +9,17 @@ function App() {
     { name: "Soda", price: 40, emoji: "🥤" }
   ];
 
+  const [message, setMessage] = useState("");
+
+  function orderFood(food) {
+    setMessage(`${food.emoji} ${food.name} added to your order!`);
+  }
+
   return (
     <div className="game-page">
 
       <nav>
-        <h2>⛏ MARYJOH'S MC DINER</h2>
+        <h2>⛏ MY FOOD MENU</h2>
         <a href="#menu">MENU</a>
       </nav>
 
@@ -29,6 +36,7 @@ function App() {
         <div className="food-container">
           {foods.map((food) => (
             <div className="food-card" key={food.name}>
+
               <div className="food-image">
                 {food.emoji}
               </div>
@@ -37,14 +45,24 @@ function App() {
 
               <p>₱{food.price}</p>
 
-              <button>ORDER NOW</button>
+              <button onClick={() => orderFood(food)}>
+                ORDER NOW
+              </button>
+
             </div>
           ))}
         </div>
+
+        {message && (
+          <div className="order-message">
+            <p>✓ {message}</p>
+          </div>
+        )}
+
       </section>
 
       <footer>
-        <p>⚔️ MARYJOH'S DINER • 2026 ⚔️</p>
+        <p>⚔️ MY FOOD MENU • 2026 ⚔️</p>
       </footer>
 
     </div>

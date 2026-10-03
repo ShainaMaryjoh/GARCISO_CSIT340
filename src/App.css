@@ -227,3 +227,25 @@ footer {
 
   font-weight: bold;
 }
+
+.order-message {
+  margin: 40px auto 0;
+  padding: 18px 25px;
+  max-width: 500px;
+
+  background: #5a3b26;
+
+  border: 6px solid #392416;
+
+  box-shadow:
+    6px 6px 0 #263d1b,
+    inset 4px 4px 0 #795333,
+    inset -4px -4px 0 #402819;
+}
+
+.order-message p {
+  color: #b8d889;
+  font-size: 20px;
+  font-weight: bold;
+  text-shadow: 2px 2px 0 #222;
+}
