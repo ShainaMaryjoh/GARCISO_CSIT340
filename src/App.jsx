@@ -2,41 +2,51 @@ import "./App.css";
 
 function App() {
   const foods = [
-    { name: "Lasagna", price: 199 },
-    { name: "Double Cheese Burger", price: 220 },
-    { name: "Fries", price: 99 },
-    { name: "Blue Lemonade", price: 60 }
+    { name: "Burger", price: 99, emoji: "🍔" },
+    { name: "Pizza", price: 150, emoji: "🍕" },
+    { name: "Fries", price: 60, emoji: "🍟" },
+    { name: "Soda", price: 40, emoji: "🥤" }
   ];
 
   return (
-    <div>
+    <div className="game-page">
+
       <nav>
-        <h2>MaryJoh's Diner</h2>
-        <a href="#menu">Menu</a>
+        <h2>⛏ MARYJOH'S MC DINER</h2>
+        <a href="#menu">MENU</a>
       </nav>
 
       <header>
-        <h1>MaryJoh's Food Menu</h1>
-        <p>Delicious food at affordable prices!</p>
+        <div className="grass-block">
+          <h1>WELCOME, PLAYER!</h1>
+          <p>Choose your food and restore your hunger bar.</p>
+        </div>
       </header>
 
       <section id="menu">
-        <h2>Our Menu</h2>
+        <h2>🍖 FOOD MENU</h2>
 
         <div className="food-container">
           {foods.map((food) => (
-            <div className="food-card">
+            <div className="food-card" key={food.name}>
+              <div className="food-image">
+                {food.emoji}
+              </div>
+
               <h3>{food.name}</h3>
+
               <p>₱{food.price}</p>
-              <button>Order Now</button>
+
+              <button>ORDER NOW</button>
             </div>
           ))}
         </div>
       </section>
 
       <footer>
-        <p>© 2026 My Food Menu</p>
+        <p>⚔️ MARYJOH'S DINER • 2026 ⚔️</p>
       </footer>
+
     </div>
   );
 }
