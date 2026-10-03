@@ -109,3 +109,33 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
+
+.hunger-bar {
+  margin: 30px auto 0;
+  padding: 15px;
+
+  background: #392416;
+
+  border: 5px solid #21150e;
+
+  max-width: 500px;
+}
+
+.hunger-bar span {
+  font-weight: bold;
+  color: white;
+}
+
+.hearts {
+  margin-top: 10px;
+
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+
+  font-size: 25px;
+}
+
+.hearts span {
+  text-shadow: 2px 2px 0 #222;
+}

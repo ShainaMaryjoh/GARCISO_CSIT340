@@ -3,16 +3,27 @@ import "./App.css";
 
 function App() {
   const foods = [
-    { name: "Burger", price: 99, emoji: "🍔" },
-    { name: "Pizza", price: 150, emoji: "🍕" },
-    { name: "Fries", price: 60, emoji: "🍟" },
-    { name: "Soda", price: 40, emoji: "🥤" }
+    { name: "Burger", price: 99, emoji: "🍔", hunger: 4 },
+    { name: "Pizza", price: 150, emoji: "🍕", hunger: 5 },
+    { name: "Fries", price: 60, emoji: "🍟", hunger: 3 },
+    { name: "Soda", price: 40, emoji: "🥤", hunger: 2 }
   ];
 
   const [message, setMessage] = useState("");
+  const [hunger, setHunger] = useState(5);
 
   function orderFood(food) {
     setMessage(`${food.emoji} ${food.name} added to your order!`);
+
+    setHunger((currentHunger) => {
+      const newHunger = currentHunger + food.hunger;
+
+      if (newHunger > 10) {
+        return 10;
+      }
+
+      return newHunger;
+    });
   }
 
   return (
@@ -27,6 +38,18 @@ function App() {
         <div className="grass-block">
           <h1>WELCOME, PLAYER!</h1>
           <p>Choose your food and restore your hunger bar.</p>
+
+          <div className="hunger-bar">
+            <span>HUNGER</span>
+
+            <div className="hearts">
+              {Array.from({ length: 10 }).map((_, index) => (
+                <span key={index}>
+                  {index < hunger ? "🍖" : "⬛"}
+                </span>
+              ))}
+            </div>
+          </div>
         </div>
       </header>
 
