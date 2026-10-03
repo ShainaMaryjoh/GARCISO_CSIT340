@@ -30,14 +30,14 @@ function App() {
     <div className="game-page">
 
       <nav>
-        <h2>⛏ MY FOOD MENU</h2>
+        <h2>⛏ MARYJOH'S SERVER</h2>
         <a href="#menu">MENU</a>
       </nav>
 
       <header>
         <div className="grass-block">
-          <h1>WELCOME, PLAYER!</h1>
-          <p>Choose your food and restore your hunger bar.</p>
+          <h1>This is your hunger bar!!</h1>
+          <p>Take a break from your adventure and grab something to eat.</p>
 
           <div className="hunger-bar">
             <span>HUNGER</span>
@@ -54,7 +54,7 @@ function App() {
       </header>
 
       <section id="menu">
-        <h2>🍖 FOOD MENU</h2>
+        <h2>🍖 MARYJOH'S MENU</h2>
 
         <div className="food-container">
           {foods.map((food) => (
@@ -85,7 +85,7 @@ function App() {
       </section>
 
       <footer>
-        <p>⚔️ MY FOOD MENU • 2026 ⚔️</p>
+        <p>⚔️ MARYJOH'S SERVER • 2026 ⚔️</p>
       </footer>
 
     </div>
