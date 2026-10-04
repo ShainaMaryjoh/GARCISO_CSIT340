@@ -25,6 +25,11 @@ function App() {
     });
   }
 
+  function resetHunger() {
+    setHunger(5);
+    setMessage("🍖 Hunger has been reset!");
+  }
+
   return (
     <div className="min-h-screen bg-[#8aaa5a] text-white">
 
@@ -61,6 +66,13 @@ function App() {
                 </span>
               ))}
             </div>
+             <button
+            onClick={resetHunger}
+            className="mt-4 border-4 border-[#315421] bg-[#5c8f3d] px-5 py-2 font-bold text-white shadow-[4px_4px_0_#1f3515] hover:bg-[#78ad4e]"
+          >
+            RESET HUNGER
+          </button>
+
           </div>
         </div>
       </header>
