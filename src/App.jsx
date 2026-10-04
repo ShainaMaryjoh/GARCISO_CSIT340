@@ -107,6 +107,48 @@ function App() {
         )}
       </section>
 
+      <section className="px-5 py-16 text-center">
+        <h2 className="mb-10 text-3xl font-bold drop-shadow-[4px_4px_0_#333]">
+          🎮 PLAYER STATUS
+        </h2>
+
+        <div className="flex flex-wrap justify-center gap-6">
+
+          <div className="w-52 border-8 border-[#392416] bg-[#5a3b26] p-6 shadow-[7px_7px_0_#263d1b]">
+            <p className="text-4xl">❤️</p>
+            <h3 className="mt-3 text-xl font-bold">HEALTH</h3>
+            <p className="mt-2 text-2xl font-bold text-[#b8d889]">
+              100 / 100
+            </p>
+          </div>
+
+          <div className="w-52 border-8 border-[#392416] bg-[#5a3b26] p-6 shadow-[7px_7px_0_#263d1b]">
+            <p className="text-4xl">🍖</p>
+            <h3 className="mt-3 text-xl font-bold">HUNGER</h3>
+            <p className="mt-2 text-2xl font-bold text-[#b8d889]">
+              {hunger} / 10
+            </p>
+          </div>
+
+          <div className="w-52 border-8 border-[#392416] bg-[#5a3b26] p-6 shadow-[7px_7px_0_#263d1b]">
+            <p className="text-4xl">💰</p>
+            <h3 className="mt-3 text-xl font-bold">COINS</h3>
+            <p className="mt-2 text-2xl font-bold text-[#b8d889]">
+              500
+            </p>
+          </div>
+
+          <div className="w-52 border-8 border-[#392416] bg-[#5a3b26] p-6 shadow-[7px_7px_0_#263d1b]">
+            <p className="text-4xl">⭐</p>
+            <h3 className="mt-3 text-xl font-bold">LEVEL</h3>
+            <p className="mt-2 text-2xl font-bold text-[#b8d889]">
+              10
+            </p>
+          </div>
+
+        </div>
+      </section>
+
       <footer className="border-t-8 border-[#2f1b12] bg-[#4b2e1f] p-6 text-center font-bold">
         <p>⚔️ MARYJOH'S SERVER • 2026 ⚔️</p>
       </footer>
