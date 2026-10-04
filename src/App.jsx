@@ -10,6 +10,7 @@ function App() {
 
   const [message, setMessage] = useState("");
   const [hunger, setHunger] = useState(5);
+  const [nightMode, setNightMode] = useState(false);
 
   function orderFood(food) {
     setMessage(`${food.emoji} ${food.name} added to your order!`);
@@ -31,7 +32,7 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen bg-[#8aaa5a] text-white">
+    <div className={`min-h-screen text-white ${nightMode ? "bg-[#172033]" : "bg-[#8aaa5a]"}`}>
 
       <nav className="flex items-center justify-between bg-[#4b2e1f] px-12 py-5 border-b-8 border-[#2f1b12] shadow-[0_5px_0_#1e120c]">
         <h2 className="text-2xl font-bold text-white drop-shadow-[3px_3px_0_#222]">
@@ -44,6 +45,12 @@ function App() {
         >
           MENU
         </a>
+        <button
+  onClick={() => setNightMode(!nightMode)}
+  className="ml-3 border-4 border-[#315421] bg-[#5c8f3d] px-6 py-3 font-bold shadow-[4px_4px_0_#1f3515] hover:bg-[#75a94d]"
+>
+  {nightMode ? "☀️ DAY" : "🌙 NIGHT"}
+</button>
       </nav>
 
       <header className="px-5 py-20 text-center">
