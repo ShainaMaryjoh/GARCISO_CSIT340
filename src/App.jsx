@@ -149,6 +149,36 @@ function App() {
         </div>
       </section>
 
+      <section className="px-5 py-16 text-center">
+        <h2 className="mb-10 text-3xl font-bold drop-shadow-[4px_4px_0_#333]">
+          📜 SERVER RULES
+        </h2>
+
+        <div className="mx-auto max-w-2xl border-8 border-[#392416] bg-[#5a3b26] p-8 shadow-[7px_7px_0_#263d1b]">
+          
+          <div className="mb-5 flex items-center gap-4 border-4 border-[#392416] bg-[#4b2e1f] p-4">
+            <span className="text-3xl">🚫</span>
+            <p className="text-lg font-bold">GET ENOUGH FOOD</p>
+          </div>
+
+          <div className="mb-5 flex items-center gap-4 border-4 border-[#392416] bg-[#4b2e1f] p-4">
+            <span className="text-3xl">🤝</span>
+            <p className="text-lg font-bold">SAVE SOME FOR OTHER PLAYERS</p>
+          </div>
+
+          <div className="mb-5 flex items-center gap-4 border-4 border-[#392416] bg-[#4b2e1f] p-4">
+            <span className="text-3xl">🔒</span>
+            <p className="text-lg font-bold">NO STEALING</p>
+          </div>
+
+          <div className="flex items-center gap-4 border-4 border-[#392416] bg-[#4b2e1f] p-4">
+            <span className="text-3xl">🎮</span>
+            <p className="text-lg font-bold">HAVE FUN!</p>
+          </div>
+
+        </div>
+      </section>
+
       <footer className="border-t-8 border-[#2f1b12] bg-[#4b2e1f] p-6 text-center font-bold">
         <p>⚔️ MARYJOH'S SERVER • 2026 ⚔️</p>
       </footer>
